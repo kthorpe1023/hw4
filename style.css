@@ -1,0 +1,25 @@
+.main {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#start {
+    text-align: center
+}
+button {
+    background: purple;
+    color: #eee;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.hide{
+    display: none;
+}

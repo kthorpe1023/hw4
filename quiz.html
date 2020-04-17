@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div>
+        <div>Score: <span id="score"></span> of 4</div>
+        <div id="timer">Timer: </div>
+    </div>
+    <div class="container main">
+    <main id="start">
+        <h2>Welcome to the Javascript Coding Quiz!</h2>
+        <button id="startBtn">START</button>
+    </main>
+    <div class="timer-start">
+    
+    <section id="questionOne" class="hide">
+        <h2>Inside which HTML element do we put the JavaScript?</h2>
+        <button id="answerBtnEl1">javascript</button>
+        <br>
+        <button id="answerBtnEl2">scripting</button>
+        <br>
+        <button id="answerBtnEl3">script</button>
+        <br>
+        <button id="answerBtnEl4">js</button>
+
+    </section>
+    <section id="question-two" class="hide">
+        <h2>Where is the correct place to insert a JavaScript?</h2>
+        <button id="ans2Btn1">The head section</button>
+        <br>
+        <button id="ans2Btn2">Both the body and the head section</button>
+        <br>
+        <button id="ans2Btn3">The body section</button>
+    </section>
+    <section id="question-three" class="hide">
+        <h2>How do you write "Hello World" in an alert box?</h2>
+        <button id="ans3Btn1">msg("Hello World")</button>
+        <br>
+        <button id="ans3Btn2">alert("Hello World")</button>
+        <br>
+        <button id="ans3Btn3">alertbox("Hello World")</button>
+        <br>
+        <button id="ans3Btn4">msgbox("Hello World")</button>
+        
+    </section>
+    <section id="question-four" class="hide">
+        <h2>How do you create a function in JavaScript?</h2>
+        <button id="ans4Btn1">function myFunction()</button>
+        <br>
+        <button id="ans4Btn2">function = myFunction()</button>
+        <br>
+        <button id="ans4Btn3">function.myFunction.()</button>
+    </section>
+    <section id="final-screen" class="hide">
+        <h2>You completed the quiz</h2>
+        <p>Score: <span id="display-score"></span> of 4</p>
+        <form>
+            <label for="enterInitials">Initials: </label>
+            <input type="text" id="enter-initials" name="initials">
+            <button id="submit">submit</button>
+        </form>
+
+    </section>
+    </div>
+    </div>
+    <script src = "script.js">
+
+
+    </script>
+</body>
+</html>
