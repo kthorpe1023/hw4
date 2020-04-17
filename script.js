@@ -1,6 +1,7 @@
 // VARIABLES
 var score = 0;
-var timer = 90;
+var timer = 60;
+var displayTimer = document.querySelector("#timer");
 var presentScore = document.getElementById("score");
 var finalScore = document.getElementById("display-score");
 var startBtn = document.querySelector("#startBtn");
@@ -20,9 +21,24 @@ function changeScreen() {
         start.style.display = "none";
         
       }
-      question.classList.remove("hide"); 
+      question.classList.remove("hide");
+   
       questionOne();
 }
+
+  var startTimer = setInterval(function(){
+    timer--;
+    displayTimer.textContent = timer;
+    if(timer == 0){
+      clearInterval(startTimer); 
+      alert("You ran out of time!")
+    }
+    
+  }, 1000);
+  
+  
+
+
 function questionOne() {
   var answerBtnEl1 = document.querySelector("#answerBtnEl1");
   var answerBtnEl2 = document.querySelector("#answerBtnEl2");
@@ -113,12 +129,17 @@ function questionFourwrong(){
   ans4Btn3.addEventListener("click", finalScreenwrong);
 }
 
+
+
 function finalScreen(){
   score++;
   question4.classList.add("hide");
   final.classList.remove("hide");
   presentScore.textContent = score;
   finalScore.textContent = score;
+  if(timer !== 0){
+    clearInterval(startTimer);
+  }
 
 }
 function finalScreenwrong(){
