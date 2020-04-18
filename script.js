@@ -146,6 +146,9 @@ function finalScreenwrong(){
   question4.classList.add("hide");
   final.classList.remove("hide");
   finalScore.textContent = score;
+  if(timer !== 0){
+    clearInterval(startTimer);
+  }
 }
 
 
