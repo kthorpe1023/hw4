@@ -13,6 +13,7 @@ var question4 = document.querySelector("#question-four");
 var final = document.querySelector("#final-screen");
 var submitBtn = document.querySelector("#submit");
 var initials = document.querySelector("#enter-initials");
+var tryAgainBtn = document.querySelector("#try-again");
 
 
 
@@ -178,9 +179,6 @@ function submitScore(){
   
   // console.log(savedScores);
   // console.log(typeof scores);
-
-  
-    
   var userInitials = initials.value;
   var myScore = {
       score: score,
@@ -193,14 +191,21 @@ function submitScore(){
 
   var myJSON = JSON.stringify(scores);
   localStorage.setItem("myScore", myJSON);
+  final.classList.add("hide");
+  // displayScores.classList.remove("hide");
+  // showScore.textContent = myScore;
 
 }
 
 //add event listener to submit initials
-submitBtn.addEventListener("click", function(e){
+submitBtn.addEventListener("click", function(e) {
   e.preventDefault();
-  submitScore();
-})
+  submitScore()
+});
+
+tryAgainBtn.addEventListener("click", submitScore);
+
+
 
 
 // Add event listener to begin
